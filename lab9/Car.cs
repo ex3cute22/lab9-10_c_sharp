@@ -12,7 +12,7 @@ namespace lab9
         int year;
         int price;
         private static int count = 0;
-
+        //Конструктор без параметров
         public Car()
         {
             marka = "";
@@ -20,6 +20,7 @@ namespace lab9
             price = 0;
             count++;
         }
+        //Конструктор с одним параметром
         public Car(String _marka)
         {
             marka = _marka;
@@ -27,6 +28,7 @@ namespace lab9
             price = 0;
             count++;
         }
+        //Конструктор со всеми параметрами
         public Car(String _marka, int _year, int _price)
         {
             marka = _marka;
@@ -66,12 +68,18 @@ namespace lab9
 
         public void read()
         {
-            Console.WriteLine("Марка: ");
-            marka = Console.ReadLine();
-            Console.WriteLine("Год: ");
-            year = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Цена: ");
-            price = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Марка: ");
+                marka = Console.ReadLine();
+                Console.WriteLine("Год: ");
+                year = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Цена: ");
+                price = Convert.ToInt32(Console.ReadLine());
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
             count++;
         }
         public void ClassCar(String classAuto)
