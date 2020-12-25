@@ -18,6 +18,7 @@ namespace lab9
             bmw.display();
             //Обьект без параметров
             Car nissan = new Car();
+            nissan.read();
             nissan.display();
         }
     }

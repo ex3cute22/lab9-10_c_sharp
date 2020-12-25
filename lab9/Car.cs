@@ -68,6 +68,7 @@ namespace lab9
 
         public void read()
         {
+            //Защищенный блок
             try
             {
                 Console.WriteLine("Марка: ");
@@ -76,7 +77,9 @@ namespace lab9
                 year = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Цена: ");
                 price = Convert.ToInt32(Console.ReadLine());
-            }catch(Exception ex)
+            }
+            //Перехват исключения
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
